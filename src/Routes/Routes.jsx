@@ -20,7 +20,7 @@ import Career from "../Components/Career/Career";
           element: <About></About>,
           children:[
             {
-              path:'/personal',
+              path:'/',
               element: <Pesronal></Pesronal>
             },
             {

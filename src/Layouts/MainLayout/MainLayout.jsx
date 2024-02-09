@@ -2,9 +2,12 @@ import { Outlet } from "react-router-dom";
 import Navbar from "../../Components/Navbar/Navbar";
 import Footer from "../../Components/Footer/Footer";
 import "./MainLayout.css";
-import backgroundVideo from "../../assets/backgroundVideoTwo.mp4";
+import backgroundVideo from "../../assets/background_video.mp4";
+
 
 const MainLayout = () => {
+  
+
   return (
     <div className="layoutCss w-full h-screen text-white">
       <div className="background-video">

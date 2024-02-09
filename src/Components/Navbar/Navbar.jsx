@@ -9,7 +9,7 @@ const Navbar = () => {
   const links = (
     <>
       <NavLink
-        to="/personal"
+        to="/"
         className={({ isActive, isPending }) =>
           isPending
             ? "pending"
