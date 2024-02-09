@@ -1,7 +1,0 @@
-#imageContainer {
-    perspective: 1000px;
-}
-
-#rotatingImage {
-    transition: all 0.2s ease;
-}

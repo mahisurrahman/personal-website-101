@@ -6,6 +6,9 @@ import About from "../Pages/About/About";
 import Contact from "../Pages/Contact/Contact";
 import Skills from "../Pages/Skills/Skills";
 import Portfolio from "../Pages/Portfolio/Portfolio";
+import Pesronal from "../Components/Personal/Pesronal";
+import Education from "../Components/Education/Education";
+import Career from "../Components/Career/Career";
 
   const router = createBrowserRouter([
     {
@@ -14,7 +17,21 @@ import Portfolio from "../Pages/Portfolio/Portfolio";
       children: [
         {
           path:'/',
-          element: <About></About>
+          element: <About></About>,
+          children:[
+            {
+              path:'/personal',
+              element: <Pesronal></Pesronal>
+            },
+            {
+              path: '/education',
+              element: <Education></Education>
+            },
+            {
+              path: '/career',
+              element: <Career></Career>
+            }
+          ]
         },
         {
           path:'contact',

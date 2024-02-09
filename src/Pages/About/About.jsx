@@ -1,57 +1,53 @@
-import { Link } from "react-router-dom";
-import displayImage from "../../assets/imageFour.png";
-import "./About.css";
-import { useRef } from "react";
+/* eslint-disable react-hooks/exhaustive-deps */
+import { Link, Outlet, useLocation } from "react-router-dom";
+import displayImage from "../../assets/imageFive.png";
+import { useEffect, useState } from "react";
+
 
 const About = () => {
-  const imageRef = useRef(null);
+  const location = useLocation();
+  const [activeNav, setActiveNav] = useState("personal");
 
-  const handleMouseMove = (e) => {
-    const xAxis = (window.innerWidth / 10 - e.pageX) / 25;
-    const yAxis = (window.innerHeight / 20 - e.pageY) / 25;
-    imageRef.current.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+  const updateActiveNav = () => {
+    const pathname = location.pathname.split("/")[1];
+    setActiveNav(pathname);
   };
 
-  const handleMouseLeave = () => {
-    imageRef.current.style.transform = "rotateY(0deg) rotateX(0deg)";
-  };
+  useEffect(() => {
+    updateActiveNav();
+  }, [location]);
 
   return (
-    <div className="px-[10vw]">
+    <div className="px-[5vw]">
       <div className=" grid grid-cols-8 items-center">
         <div className=" col-span-2 flex flex-col gap-4 items-end text-right font-RussoOne">
           <Link to="/personal">
-            <button className="bg-gradient-to-l from-[#540351] px-[4vw] rounded-e-full text-[3.5vw] hover:bg-gradient-to-l hover:from-zinc-500">
+            <button className={`px-[4vw] rounded-e-full duration-700 ${activeNav === "personal" ? 'bg-gradient-to-l from-[#540351] text-[3.5vw] duration-700' : ''}`}>
               Personal
             </button>
           </Link>
           <Link to="/education">
-            <button className="px-[4vw] rounded-e-full hover:bg-gradient-to-l hover:from-zinc-500 text-[2.5vw]">
+            <button className={`px-[4vw] rounded-e-full hover:bg-gradient-to-l hover:from-zinc-500 text-[2.5vw] duration-700 ${activeNav === "education" ? 'bg-gradient-to-l from-[#540351] text-[3.5vw] duration-700' : ''}`}>
               Education
             </button>
           </Link>
           <Link to="/career">
-            <button className="px-[4vw] rounded-e-full hover:bg-gradient-to-l hover:from-zinc-500 text-[2vw]">
+            <button className={`px-[4vw] rounded-e-full hover:bg-gradient-to-l hover:from-zinc-500 text-[2vw] duration-700 ${activeNav === "career" ? 'bg-gradient-to-l from-[#540351] text-[3.5vw] duration-700' : ''}`}>
               Career
             </button>
           </Link>
         </div>
         <div
-          className="col-span-4"
-          id="imageContainer"
-          onMouseMove={handleMouseMove}
-          onMouseLeave={handleMouseLeave}
+          className="col-span-3"
         >
           <img
             src={displayImage}
-            className="h-[78vh] w-[100vw] object-cover"
-            id="rotatingImage"
-            ref={imageRef}
+            className="h-fit object-cover"
             alt=""
           />
         </div>
-        <div className="col-span-2 flex flex-col items-start text-left">
-          <h1>About</h1>
+        <div className="col-span-3 flex flex-col items-start text-left">
+          <Outlet></Outlet>
         </div>
       </div>
     </div>
