@@ -1,0 +1,7 @@
+.contact-outline{
+    box-shadow: 2px 3px 5px #ff0000;
+}
+
+.text-shadoww{
+    filter: drop-shadow(2px 3px 5px green);
+}
