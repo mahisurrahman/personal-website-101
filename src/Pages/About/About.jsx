@@ -22,17 +22,17 @@ const About = () => {
       <div className=" grid grid-cols-8 items-center">
         <div className=" col-span-2 flex flex-col gap-4 items-end text-right font-RussoOne">
           <Link to="/personal">
-            <button className={`px-[4vw] rounded-e-full duration-700 ${activeNav === "personal" ? 'bg-gradient-to-l from-[#540351] text-[3.5vw] duration-700' : ''}`}>
+            <button className={`px-[4vw] rounded-e-full duration-700 ${activeNav === "personal" ? 'bg-gradient-to-l from-[#540351] text-[3.5vw] duration-700 hover:bg-[#540351]' : ''}`}>
               Personal
             </button>
           </Link>
           <Link to="/education">
-            <button className={`px-[4vw] rounded-e-full hover:bg-gradient-to-l hover:from-zinc-500 text-[2.5vw] duration-700 ${activeNav === "education" ? 'bg-gradient-to-l from-[#540351] text-[3.5vw] duration-700' : ''}`}>
+            <button className={`px-[4vw] rounded-e-full hover:bg-gradient-to-l hover:from-zinc-500 text-[2.5vw] duration-700 ${activeNav === "education" ? 'bg-gradient-to-l from-[#1f8fd0] text-[3.5vw] duration-700 hover:bg-[#1f8fd0]' : ''}`}>
               Education
             </button>
           </Link>
           <Link to="/career">
-            <button className={`px-[4vw] rounded-e-full hover:bg-gradient-to-l hover:from-zinc-500 text-[2vw] duration-700 ${activeNav === "career" ? 'bg-gradient-to-l from-[#540351] text-[3.5vw] duration-700' : ''}`}>
+            <button className={`px-[4vw] rounded-e-full hover:bg-gradient-to-l hover:from-zinc-500 text-[2vw] duration-700 ${activeNav === "career" ? 'bg-gradient-to-l from-[#148662] text-[3.5vw] duration-700 hover:bg-[#148662]' : ''}`}>
               Career
             </button>
           </Link>
