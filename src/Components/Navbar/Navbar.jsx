@@ -1,9 +1,10 @@
-import {  NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 import { FaUserAstronaut } from "react-icons/fa";
 import { GoGear } from "react-icons/go";
 import { GiFiles } from "react-icons/gi";
 import { FaEnvelopeOpenText } from "react-icons/fa6";
+import { Fade } from "react-awesome-reveal";
 
 const Navbar = () => {
   const links = (
@@ -59,18 +60,20 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="px-[3vw] py-[2vw]">
-      <div className="flex justify-between items-center">
-        <div className="font-RussoOne">
-          <h1 className="text-[2vw]">Mahisur Rahaman</h1>
-          <hr />
-          <h1 className="text-[1vw] tracking-widest">MERN STACK DEVELOPER</h1>
-        </div>
-        <div className="text-[2vw] text-white font-semibold font-RussoOne flex gap-[4vw]">
-          {links}
+    <Fade cascade damping={0.1} duration={2500}>
+      <div className="px-[3vw] py-[2vw]">
+        <div className="flex justify-between items-center">
+          <div className="font-RussoOne">
+            <h1 className="text-[2vw] dropping-shadow">Mahisur Rahaman</h1>
+            <hr />
+            <h1 className="text-[1vw] tracking-widest dropping-shadow-Two">MERN STACK APP DEVELOPER</h1>
+          </div>
+          <div className="text-[2vw] text-white font-semibold font-RussoOne flex gap-[4vw]">
+            {links}
+          </div>
         </div>
       </div>
-    </div>
+    </Fade>
   );
 };
 
