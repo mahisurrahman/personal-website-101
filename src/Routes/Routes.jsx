@@ -9,6 +9,8 @@ import Portfolio from "../Pages/Portfolio/Portfolio";
 import Pesronal from "../Components/Personal/Pesronal";
 import Education from "../Components/Education/Education";
 import Career from "../Components/Career/Career";
+import FrontEnd from "../Components/FrontEnd/FrontEnd";
+import Backend from "../Components/Backend/Backend";
 
   const router = createBrowserRouter([
     {
@@ -39,7 +41,17 @@ import Career from "../Components/Career/Career";
         },
         {
           path: 'skills',
-          element: <Skills></Skills>
+          element: <Skills></Skills>,
+          children: [
+            {
+              path:'frontend',
+              element: <FrontEnd></FrontEnd>
+            },
+            {
+              path:'backend',
+              element: <Backend></Backend>
+            },
+          ]
         },
         {
           path: 'portfolio',

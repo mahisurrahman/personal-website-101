@@ -15,8 +15,8 @@ const Navbar = () => {
           isPending
             ? "pending"
             : isActive
-            ? "text-blue-500"
-            : "flex flex-col items-center hover:text-blue-500 hover:underline hover:cursor-pointer hover:duration-700"
+            ? "text-lime-500"
+            : "duration-700 flex flex-col items-center hover:text-blue-500 hover:underline hover:cursor-pointer hover:duration-700"
         }
       >
         <FaUserAstronaut></FaUserAstronaut>
@@ -28,7 +28,7 @@ const Navbar = () => {
             ? "pending"
             : isActive
             ? "text-blue-500"
-            : "flex flex-col items-center hover:text-blue-500 hover:underline hover:cursor-pointer hover:duration-700"
+            : "duration-700 flex flex-col items-center hover:text-blue-500 hover:underline hover:cursor-pointer hover:duration-700"
         }
       >
         <GoGear></GoGear>
@@ -39,8 +39,8 @@ const Navbar = () => {
           isPending
             ? "pending"
             : isActive
-            ? "text-blue-500"
-            : "flex flex-col items-center hover:text-blue-500 hover:underline hover:cursor-pointer hover:duration-700"
+            ? "text-red-500"
+            : "duration-700 flex flex-col items-center hover:text-blue-500 hover:underline hover:cursor-pointer hover:duration-700"
         }
       >
         <GiFiles></GiFiles>
@@ -51,8 +51,8 @@ const Navbar = () => {
           isPending
             ? "pending"
             : isActive
-            ? "text-blue-500"
-            : "flex flex-col items-center hover:text-blue-500 hover:underline hover:cursor-pointer hover:duration-700"
+            ? "text-yellow-500"
+            : "duration-700 flex flex-col items-center hover:text-blue-500 hover:underline hover:cursor-pointer hover:duration-700"
         }
       >
         <FaEnvelopeOpenText></FaEnvelopeOpenText>
@@ -68,7 +68,7 @@ const Navbar = () => {
             <hr />
             <h1 className="text-[1vw] tracking-widest dropping-shadow-Two">MERN STACK APP DEVELOPER</h1>
           </div>
-          <div className="text-[2vw] text-white font-semibold font-RussoOne flex gap-[4vw]">
+          <div className="text-[3vw] text-white font-semibold font-RussoOne flex gap-[4vw]">
             {links}
           </div>
         </div>
